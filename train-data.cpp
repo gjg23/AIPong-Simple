@@ -21,10 +21,10 @@ std::vector<TrainData> PongStateGenerator::generateStates()
 }
 
 int PongStateGenerator::calculate_movement(const GameState& state) {
-    if (state.bally > state.paddley){
+    if (state.bally > state.paddley + PADDLE_HEIGHT / 2){
         return 0;
     }
-    else if (state.bally < state.paddley){
+    else if (state.bally < state.paddley + PADDLE_HEIGHT / 2){
         return 1;
     }
     else{
